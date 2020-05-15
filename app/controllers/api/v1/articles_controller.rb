@@ -10,6 +10,7 @@ class Api::V1::ArticlesController < ApplicationController
   
     def destroy
       Article.destroy(params[:id])
+      render json: {is_success: true}
     end
   
     def update
